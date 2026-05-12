@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset=""UTF-8>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+        <title>나의 자기소개 홈페이지</title>
+        <style>
+            body{
+                margin:0;
+                font-family:Arial;
+
+                background:linear-gradient(to right, #721e57, #2a986e);
+
+                background:linear-gradient(-45deg, #720ed6, #5906e8, #e2058a, #06e6a3);
+                background-size:400% 400%;
+                animation:bgmove 10s ease infinite;
+            }
+            .star{
+                position:fixed;
+                color:#00ffff;
+                font-size:40px;
+                animation:starFlash 1s infinite alternate;
+            }
+            .star1{
+                top:10%;
+                left:10%;
+            }
+            .star1{
+                top:10%;
+                left:10%;
+            }
+            .star2{
+                top:20%;
+                left:80%;
+            }
+            .star3{
+                top:50%;
+                left:30%;
+            }
+            .star4{
+                top:70%;
+                left:60%;
+            }
+            .star5{
+                top:40%;
+                left:90%;
+            }
+            .star6{
+                top:50%;
+                left:100%;
+            }
+            @keyframes starFlash{
+                from{
+                    opacity:0.2;
+                    transform:scale(0.8);
+                }
+                to{
+                    opacity:1;
+                    transform:scale(1.3);
+                }
+            }
+            
+            header{
+                text-align:center;
+                padding:40px;
+                color:white;
+                background:rgba(0, 0, 0. 3);
+            }
+            header h1{
+                font-size:55px;
+                margin:10px;
+                color:white;
+            }
+            header p{
+                font-size:22px;
+                color:white;
+            }
+            img{
+                width:180px;
+                border-radius:50%;
+                border:5px solid white;
+            }
+            .container{
+                width:85%;
+                margin:auto;
+            }
+            .card{
+                background:rgba(0,0,0,0,55);
+                color:white;
+                margin-top:30px;
+                padding:30px;
+                border-radius:20px;
+                border:2px solid rgb(204, 234, 7);
+                box-shadow:0px 0px 15px rgba(219, 8, 138, 0.5);
+                transition:0.3s;
+
+            }
+            .card:hover{
+                transform:scale(1.02);
+            }
+            h2{
+                font-size:35px;
+                border-bottom:3px solid white;
+                padding-bottom:10px;
+            }
+
+            /*자기소개 색상*/
+            .intro{
+                color:white;
+            }
+
+            /*취미 색상*/
+            .hobby{
+                color:rgb(0, 255, 89);
+            }
+
+            ul{
+                font-size:25px;
+                color:white;
+            }
+
+            .card p{
+                color:white;
+                font-size:24px;
+                animation:profileMove 5.0s infinite;
+            }
+
+            table{
+                width:100%;
+                border-collapse:collapse;
+                margin-top:20px;
+            }
+
+            table,th, td{
+                border:2px solid white;
+            }
+
+            th{
+                background:greenyellow;
+                color:white;
+            }
+
+            th, td{
+                padding:15px;
+                text-align:center;
+                font-size:20px;
+                background:rgb(8, 227, 70);
+                color:rgb(94, 6, 226);
+            }
+
+            footer{
+                background:white;
+                color:white;
+                text-align:center;
+                padding:20px;
+                margin-top:40px;
+                font-size:20px;
+            }
+            .license{
+                color:#e70606;
+                background:#09e661;
+                padding:15px;
+                border-radius:15px;
+                text-align:left;
+                font-size:40px;
+            }
+            @keyframes bgmove{
+                0%{
+                    background-position: 0% 50%;
+                }
+                50%{
+                    background-position:100% 50%;
+                }
+                100%{
+                    background-position:0% 50%;
+                }
+            }
+
+              .profile{
+                width:180px;
+                height:180px;
+                border-radius:50%;
+                border:5px solid white;
+                object-fit:cover; 
+                object-position:center;
+                display:block;
+                margin:auto;
+                animation:profileMove 10s infinite;}
+
+                @keyframes droneMove{
+                    0%{
+                        transform:translateX(0px);
+                    }
+                    50%{
+                        transform:translateX(200px);
+                    }
+                    100%{
+                        transform:translateX(1800px);
+                    }
+                }
+            
+            .drone img{
+                width: 700px;
+            }
+            .drone{
+                position:fixed;
+                left:-500px;
+                animation:droneMove 12s linear infinite;
+            }
+            .drone img{
+                width:400px;
+            }
+            .drone1{
+                top:380px;
+                animation-delay: 0s;
+            }
+            .drone2{
+                top:400px;
+                animation-delay: 2.5s;
+            }
+            .drone3{
+                top:380px;
+                animation-delay: 4s;
+            }
+            .drone4{
+                top:380px;
+                animation-delay: 5.5s;
+            }
+            .drone5{
+                top:480px;
+                animation-delay: 7s;
+            }
+
+            @keyframes droneMove{
+                0%{
+                  transform:translateX(-300px);
+                }
+                50%{
+                    transform:translateX(1600px);
+                }
+                100%{
+                    transform:translateX(-300px);
+                }
+                }
+                
+            @keyframes profileMove{
+                0%{
+                transform:translateY(20px);
+            }
+            50%{
+                transform:translateY(-20px);
+            }
+            100%{
+                transform:translateY(20px);
+            }
+            }
+            .snow{
+                position:fixed;
+                top:-10px;
+                color:white;
+                font-size:60px;
+                z-index:9999;
+                
+                animation:snowFall linear infinite;
+            }
+            .snow:nth-child(1){
+                left:10%;
+                animation-duration:5s;
+            }
+            .snow:nth-child(2){
+                left:20%;
+                animation-duration:7s;
+            }
+            .snow:nth-child(3){
+                left:30%;
+                animation-duration:6s;
+            }
+            .snow:nth-child(4){
+                left:40%;
+                animation-duration:8s;
+            }
+            .snow:nth-child(5){
+                left:50%;
+                animation-duration:5s;
+            }
+            .snow:nth-child(6){
+                left:60%;
+                animation-duration:7s;
+            }
+            .snow:nth-child(7){
+                left:70%;
+                animation-duration:6s;
+            }
+            .snow:nth-child(8){
+                left:80%;
+                animation-duration:8s;
+            }
+            .snow:nth-child(9){
+                left:90%;
+                animation-duration:5s;
+            }
+            @keyframes snowFall{
+                0%{
+                    transform:translateY(-10px);
+                }
+                100%{
+                    transform:translateY(100vh);
+                }
+            }
+            
+            @keyframes snowFall{
+                0%{
+                    transform:translateY(-10px);
+                    opacity:1;
+                }
+                100%{
+                    transform:translateY(100vh);
+                    opacity:0;
+                .snow:nth-child(1){
+                left:10%;
+                animation-duration:5s;
+            }
+            .neon{
+                color:#ffffff !important;
+                font-size:90px;
+                font-weight:bold;
+                
+                animation:neonFlash 0.3s infinite;   
+                text-shadow: 0 0 10px #ffffff, 0 0 20px #07f990, 0 0 40px #9fe606, 0 0 80px #00ffff !important;        
+             }
+                
+            @keyframes neonFlash{
+                0%{
+                    opacity:1;
+                    transform:scale(1);
+                }
+                50%{
+                    opacity:0.2;
+                    transform:scale(1.2);
+                }
+                100%{
+                    opacity:1;
+                    transform:scale(1);
+                }
+             }
+                
+                    
+                
+
+        </style>
+    </head>
+    
+    <body>
+        <div class="snow" style="left:5%;
+        animation-duration:5s;"></div>
+        <div class="snow" style="left:15%; animation-duration:5s;"></div>
+        <div class="snow">*</div>
+        <div class="snow" style="left:25%; animation-duration:7s;"></div>
+        <div class="snow">*</div>
+        <div class="snow" style="left:45%; animation-duration:6s;"></div>
+        <div class="snow">*</div>
+        <div class="snow" style="left:55%; animation-duration:8s;"></div>
+        <div class="snow">*</div>
+        <div class="snow" style="left:65%; animation-duration:5s;"></div>
+        <div class="snow">*</div>
+        <div class="snow" style="left:75%; animation-duration:8s;"></div>
+        <div class="snow">*</div>
+        <div class="snow" style="left:85%; animation-duration:5s;"></div>
+        <div class="snow">*</div>
+        <div class="snow" style="left:95%; animation-duration:7s;"></div>
+        <div class="snow">*</div>
+
+        <div class="star star1">★</div>
+        <div class="star star2">★</div>
+        <div class="star star3">★</div>
+        <div class="star star4">★</div>
+        <div class="star star5">★</div>
+        <div class="star star6">★</div>
+
+        <header>
+
+<div class="drone">
+    <img src="plane.png">
+    <div class="drone drone1">
+        <img src=""plane1.png></div>
+        <div class="drone drone2">
+            <img src="plane2.png"></div>
+            <div class="drone drone2">
+                <img src="plane3.png">
+            </div>
+            <div class="drone drone3">
+                <img src="plane4.png">
+            </div>
+            <div class="drone drone4">
+                <img src="plane5.png">
+            </div>
+</div>
+
+
+<img src="HoBaeKim.jpg" class="profile">
+<h1 style="color:white; font-size:90px; font-weight:bold;
+animation:neonFlash 0.3s infinite; text-shadow: 0 0 10px #ffffff, 0 0 20px #97ef08, 0 0 40px #FFD700, 0 0 80px #8400ff, 0 0 120px #f40606;">HoBaeKim</h1>
+
+
+<p style="color:white; font-size:22px;"> AI 앱개발 프로그래밍 공부중</p>"
+</header>
+
+<audio controls loop>
+ <source src="https:www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+
+</body>
+</html>
+
+<div class="container"></div>
+<div class="card">
+    <h2 style="color:rgb(13, 224, 129);
+    text-align:center;">
+    프로필</h2>
+</div>
+
+<h2 class="intro" style="color:rgb(10, 217, 34);">자기소개</h2>
+
+<p style="color:yellow;font-size:22px;line-height:1.8;">
+
+안녕하세요. <br><br>저는 소프트웨어코딩과 프로그래밍과 인공지능을 공부하고 있는 학생입니다.<br> 
+무척 재미 있습니다. 서울디지털대학교 IT공학부로 오세요.<br>
+저는 AI+GPU 엔지니어전문가를 지망합니다.<br>
+HTML, JavaScript, Android App 개발을 배우고 있습니다.<br><br></p>
+</div>
+
+
+<div class="card">
+<h2 class="hobby">취미</h2> 
+    <p style="color :whitesmoke; font-size:22px;">
+    드론날리기 : 공항상공에 소형과 중형 드론 각 1대씩 정찰중 입니다^.^<br><br>
+    비행기 편대비행 : 2대의 여객 비행기가 고객 수송중입니다^.^<br><br>
+    공항 버스 : 고객 대기중입니다^.^<br><br>
+    자전거타기 : 이미지가 없습니다^.^<br><br>
+    프로그래밍 : Click 음악 재생 됩니다^.^</p>
+
+</div>
+<div class="card">
+    <h2 class="license">보유자격증</h2>
+    
+    <table>
+        <tr>
+            <th>Certified Social Worker</th>
+            <th>Advanced Skills</th>
+        </tr>
+
+        <tr>
+            <th>English Teaching License TESOL</th>
+            <th>Intermediate+Score</th>
+        </tr>
+        
+        <tr>
+            <td>HTML</td>
+            <td>King of Beginners왕초보</td>
+        </tr>
+
+        <tr>
+            <td>JavaScript</td>
+            <td>Complete Beginner진짜초보</td>
+        </tr>
+
+        <tr>
+            <td>Android</td>
+            <td>Mega Beginner대빵초보</td>
+        </tr>
+
+        <tr>
+            <td>Win Prog App</td>
+            <td>Intermediate+:91</td>
+        </tr>
+
+        <tr>
+            <td>Matlab Prog</td>
+            <td>Basic Score Range:95-100</td>
+        </tr>
+
+        <tr>
+            <td>Info Education Theory 정보교과교육론</td>
+            <td>Score 100</td>
+        </tr>
+
+        <tr>
+            <td>Pastoral Cert</td>
+            <td>Some people dislike pastors who live on donations, <br>so I prefer not to mention it. Personally, <br>I have never received money that way^.^</td>
+        </tr>
+
+    </table>
+</div>
+<footer>2026 자기소개 홈페이지 과제물</footer>
+</body>
+</html>
+  
