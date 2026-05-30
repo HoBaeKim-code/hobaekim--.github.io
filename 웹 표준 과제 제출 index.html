@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ko">Ho Bae Kim
+    <head>
+        <meat charset="UTF-8">
+            <title>기말과제 : 3번째 5월 30일</title>
+            <style>
+                *{
+                    margin:0;
+                    padding:0;
+                    box-sizing:border-box;
+                }
+                body{
+                    font-family:"맑은 고딕";
+                    height:auto;
+                    overflow:auto;
+                }
+        /*--전체 프레임--*/
+                #wrap{
+                    width:980px;
+                    margin:0 auto;
+                    position:relative;
+                   
+                }
+        /*--로그인 메뉴--*/
+                #top_menu{
+                    width:980px;
+                    height:40px;
+                    margin:0 auto;
+                    text-align:right;
+                    line-height:40px;
+                    font-size:14px;
+                }
+                #top_menu a{
+                    text-decoration:none;
+                    color:black;
+                    margin-left:10px;
+                }
+                #top_menu a:hover{
+                    color:#0066cc;
+                }
+        /*--title--*/
+                #title{
+                    height:50px;
+                    margin-bottom:2px;
+                    box-shadow:0px 2px 8px #04ec60;
+                }
+                #title img{
+                    height:50px;
+                }
+        /*--1. top_gnb 가로 메뉴--*/
+                #top_gnb{
+                    width:980px;
+                    height:70px;
+                    overflow:hidden;
+                    margin-bottom:2px;
+                    border:1px solid yellow;
+                }
+                #top_gnb a{
+                    text-decoration: none;       
+                }
+                #top_gnb .menu{
+                    float:left;
+                    width:140px;
+                    height:50px;
+                    overflow:hidden;
+                    background:url(images/top_gnb.png)no-repeat;
+                    border:1px solid red;
+                    box-sizing:border-box;
+                }
+                #top_gnb .menu:last_child{
+                    margin-right:0;
+                }
+              
+        /*--sprite 가로 메뉴 위치--*/
+                #top_gnb .item_1{
+                    background-position: 0px 0px;
+                }
+                #top_gnb .item_2{
+                    background-position:0px -50px;
+                }
+                 #top_gnb .item_3{
+                    background-position:0px -100px;
+                }
+                 #top_gnb .item_4{
+                    background-position:0px -150px;
+                }
+                 #top_gnb .item_5{
+                    background-position:0px -200px;
+                }
+                 #top_gnb .item_6{
+                    background-position:0px -250px;
+                }
+                 #top_gnb .item_7{
+                    background-position:0px -300px;
+                }
+        /*--hover--*/
+                #top_gnb .menu:hover{
+                    filter:brightness(70%);
+                }
+        /*--2. bottom_gnb 가로 메뉴--*/
+             #bottom_gnb{
+                width:980px;
+                height:70px;
+                margin-bottom:2px;
+             }
+             #bottom_gnb a{
+                text-decoration: none;
+             }
+             #bottom_gnb .menu{
+                float:left;
+                width:98px;
+                height:70px;
+                line-height:110px;
+                margin-right:2px;
+                background:url(images/bottom_gnb.png)no-repeat;
+                text-align: center;
+                font-size:18px;
+                color: #555;
+                transition:0.3s;
+             }
+             #bottom_gnb .menu:last-child{
+                margin-right:0;
+             }
+        /*--sprite 가로 메뉴 위치--*/
+               #bottom_gnb .item_1{
+                   background-position:0px 0px;
+               }
+               #bottom_gnb .item_2{
+                background-position:0px -81px;
+               }
+               #bottom_gnb .item_3{
+                    background-position:0px -162px;
+               }
+                #bottom_gnb .item_4{
+                    background-position:0px -243px;
+                }
+                #bottom_gnb .item_5{
+                    background-position:0px -324px;
+                }
+                #bottom_gnb .item_6{
+                    background-position:0px -405px;
+                }
+                #bottom_gnb .item_7{
+                    background-position:0px -486px;
+                }
+                #bottom_gnb .item_8{
+                    background-position:0px -567px;
+                }
+                #bottom_gnb .item_9{
+                    background-position:0px -648px;
+                }
+                #bottom_gnb .item_10{
+                    background-position:0px -729px;
+                }
+        /*--hover--*/
+                #bottom_gnb .menu:hover{
+                    filter:brightness(120%);
+                    transform:translateY(-3px);
+                    transition:0.3s;
+                }
+        /*--3. 컴퓨터, 가전제품, 모바일, 게임기, 생활용품--*/
+                #detail_list{
+                    clear:both;
+                    width:980px;
+                    height:180px;
+                    background:#0ae68e;
+                    border:1px solid #f90606;
+                    padding:20px;
+                    margin-bottom:2px;
+                }
+                #detail_list ul{
+                    float:left;
+                    width:180px;
+                    list-style:none;
+                }
+                #detail_list .header{
+                    font-size:30px;
+                    color:#003366;
+                    font-weight:bold;
+                    margin-bottom:10px;
+                }
+        /*--content 전체--*/
+                #content{
+                    margin-top:10px;
+                    min-height:1500px;
+                }
+        /*--left content--*/
+                #left_content{
+                    width: 815px;
+                    float:left;
+                    margin-left:170px;
+                }
+        /*--4--content_box--*/
+                .content_box{
+                    width:880px;
+                    text-align:center;
+                    margin-bottom:5px;
+                    border:2px solid red;
+                    border-radius:12px;
+                    padding: 10px;
+                    background:#ffffff;
+                }
+                .content_box img{
+                    display:inline-block;
+                }
+                .bus{
+                    width: 450px;
+                    height: 280px;
+                    background:yellow
+                }
+                .air1{
+                    width: 300px;
+                    height: 208px;
+                    background:yellow
+                }
+                .air2{
+                    width: 300px;
+                    height: 213px;
+                    background: yellow
+                }
+                .matlab{
+                    width: 200px;
+                    height: 220px;  
+                    background:greenyellow
+                }
+        #right_bottom{
+            border:1px solid purple;
+            position:absolute;
+            top: 293px;
+            left: 1068px;
+            width:83px;
+            height: 1050px;
+            overflow:visible;
+        }
+
+        #right_bottom a{
+            text-decoration:none;
+        }
+        #right_bottom .menu{
+            border:none;
+            width: 80px;
+            height:175px;
+            display: block;
+            background:url(images/bottom세로_gnb.png)no-repeat;
+        }
+
+        /*------sprite------*/
+        #right_bottom .item_1{
+            background-position:0px 0px;
+        }
+         #right_bottom .item_2{
+            background-position:0px -188px;
+        }
+         #right_bottom .item_3{
+            background-position:0px -376px;
+        }
+         #right_bottom .item_4{
+            background-position:0px -564px;
+        }
+         #right_bottom .item_5{
+            background-position:0px -752px;
+        }
+         #right_bottom .item_6{
+            background-position:0px -940px;
+        }
+        /*-----hover-----*/
+        #right_bottom .menu:hover{
+               filter:brightness(70%)
+        }
+               #wrap{
+                width:980px;
+                margin:0 auto;
+                position:relative;
+               }
+                </style>
+            </head>
+
+        <body>
+            <div id="wrap">
+        <!--로그인 메뉴--본인소개 홈페이지 링크--->
+                <div id="top_menu">
+                    <a href="https://hobaekim-code.github.io/hobaekim--.github.io">로그인</a>
+                        <a href="https://hobaekim-code.github.io/hobaekim--.github.io">회원가입</a>
+                        <a href="https://hobaekim-code.github.io/hobaekim--.github.io">고객센터</a> 
+                </div>
+        <!--title----본인소개 홈페이지 링크---->
+                <div id="title">
+                      <a href="https://hobaekim-code.github.io/hobaekim--.github.io">
+                        <img src="images/title.png">
+                    </a>
+                </div>
+      
+        <!--2. bottom_gnb 가로 메뉴 위치--본인소개 홈페이지 링크>
+                <nav id="bottom_gnb">
+                    <a href="https://hobaekim-code.github.io/hobaekim--.github.io"><div class="menu item_1"></div></a>
+                    <a href="https://hobaekim-code.github.io/hobaekim--.github.io"><div class="menu item_2"></div></a>
+                    <a href="https://hobaekim-code.github.io/hobaekim--.github.io"><div class="menu item_3"></div></a>
+                    <a href="https://hobaekim-code.github.io/hobaekim--.github.io"><div class="menu item_4"></div></a>
+                    <a href="https://hobaekim-code.github.io/hobaekim--.github.io"><div class="menu item_5"></div></a>
+                    <a href="https://hobaekim-code.github.io/hobaekim--.github.io"><div class="menu item_6"></div></a>
+                    <a href="https://hobaekim-code.github.io/hobaekim--.github.io"><div class="menu item_7"></div></a>
+                    <a href="https://hobaekim-code.github.io/hobaekim--.github.io"><div class="menu item_8"></div></a>
+                    <a href="https://hobaekim-code.github.io/hobaekim--.github.io"><div class="menu item_9"></div></a>
+                    <a href="https://hobaekim-code.github.io/hobaekim--.github.io"><div class="menu item_10"></div></a>
+                </nav>
+        <!--3. 초록 메뉴-->
+                <nav id="detail_list">
+                    <ul>
+                        <li class="header">컴퓨터</li>
+                        <li>노트북</li>
+                        <li>모니터</li>
+                        <li>키보드</li>
+                        <li>마우스</li></ul>
+                    <ul>
+                        <li class="header">가전제품</li>
+                        <li>냉장고</li>
+                        <li>세탁기</li>
+                        <li>청소기</li>
+                        <li>전자레인지</li></ul>
+                    <ul>
+                        <li class="header">모바일</li>
+                        <li>스마트폰</li>
+                        <li>태블릿</li>
+                        <li>충전기</li>
+                        <li>이어폰</li></ul>
+                    <ul>
+                        <li class="header">게임기</li>
+                        <li>닌텐도</li>
+                        <li>플레이스테이션</li>
+                        <li>XBOX</li>
+                        <li>VR기기</li></ul>
+                    <ul>
+                        <li class="header">생활용품</li>
+                        <li>의자</li>
+                        <li>책상</li>
+                        <li>침대</li>
+                        <li>조명</li></ul>
+                    </div>
+                    <div id="content">
+        <!--왼쪽-->
+                        <div id="left_content">
+                            <div class="content_box">
+                                <img class="bus" src="images/bus.png">
+                            </div>
+        <!--5.-->
+                            <div class="content_box">
+                                <img class="air1" src="images/100.png">
+                            </div>
+        <!--6.-->
+                            <div class="content_box">
+                                <img class="air2" src="images/150.png">
+                            </div>
+        <!--7.-->
+                            <div class="content_box">
+                                <img class="matlab" src="images/matlab.png">
+                            </div>
+                        </div>
+
+                        <div id="right_wrap">    
+        <!------오른쪽 8번 메뉴-----본인소개 홈페이지 링크-------->
+                    <div id="right_bottom">
+                    <a href="https://hobaekim-code.github.io/hobaekim--.github.io"><div class="menu item_1"></div></a>
+                    <a href="https://hobaekim-code.github.io/hobaekim--.github.io"><div class="menu item_2"></div></a>
+                    <a href="https://hobaekim-code.github.io/hobaekim--.github.io"><div class="menu item_3"></div></a>
+                    <a href="https://hobaekim-code.github.io/hobaekim--.github.io"><div class="menu item_4"></div></a>
+                    <a href="https://hobaekim-code.github.io/hobaekim--.github.io"><div class="menu item_5"></div></a>
+                    <a href="https://hobaekim-code.github.io/hobaekim--.github.io"><div class="menu item_6"></div></a>
+                  
+                    </div>  
+            </body> 
+        </html>
+
+                                
+
+                        
+
+
+                    
+
+
+                
+               
+
